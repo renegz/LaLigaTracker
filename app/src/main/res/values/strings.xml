@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LaLigaTracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_team">Nombre del equipo</string>
+    <string name="stadium_name">Estadio del equipo</string>
+    <string name="coach_name">Nombre del entrenador</string>
 </resources>
