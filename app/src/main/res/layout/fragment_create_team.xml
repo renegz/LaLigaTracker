@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.guzman.laligatracker.ui.createteam.CreateTeamViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,7 +42,8 @@
                 android:id="@+id/name_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:text="@={viewmodel.name}"
+                android:textSize="16sp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,7 +64,8 @@
                 android:id="@+id/stadium_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:text="@={viewmodel.stadium}"
+                android:textSize="16sp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,7 +86,8 @@
                 android:id="@+id/coach_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:text="@={viewmodel.coach}"
+                android:textSize="16sp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +99,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:hint="@string/coach_name"
+            android:hint="@string/team_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tfCoachName">
@@ -99,12 +108,14 @@
                 android:id="@+id/description_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:text="@={viewmodel.description}"
+                android:textSize="16sp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/actionAddTeam"
+            android:onClick="@{() -> viewmodel.createTeam()}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"

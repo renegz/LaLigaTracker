@@ -1,10 +1,10 @@
 package com.guzman.laligatracker.repositories
 
-import com.guzman.laligatracker.data.models.LaLigaTeam
+import com.guzman.laligatracker.data.models.TeamModel
 
-class TeamRepository(private var teams: MutableList<LaLigaTeam>) {
+class TeamRepository(private var teams: MutableList<TeamModel>) {
 
     fun getTeams() = teams
+    fun addTeam(newTeam: TeamModel) = teams.add(newTeam)
 
-    fun addTeam(newTeam: LaLigaTeam) = teams.add(newTeam)
 }
