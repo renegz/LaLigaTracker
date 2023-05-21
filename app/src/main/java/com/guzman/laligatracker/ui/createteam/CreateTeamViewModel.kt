@@ -33,6 +33,13 @@ class CreateTeamViewModel(private val teamRepository: TeamRepository): ViewModel
         Log.d("TAG APP" , getTeams().toString())
     }
 
+    fun setSelectedMovie(team: TeamModel){
+        name.value = team.name
+        stadium.value = team.stadium
+        coach.value = team.coach
+        description.value = team.description
+    }
+
     companion object{
         val Factory = viewModelFactory {
             initializer {
